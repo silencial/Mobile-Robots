@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="lab0" name="subscriber" type="subscriber.py" output='screen'>
+    </node>
+</launch>

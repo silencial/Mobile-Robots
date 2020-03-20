@@ -1,0 +1,4 @@
+<launch>
+    <arg name="map_file" default="$(find lab2)/maps/cse022_w_obstacles.yaml" />
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+</launch>

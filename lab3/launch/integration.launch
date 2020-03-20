@@ -1,0 +1,9 @@
+<launch>
+    <param name='/controller/type' value='PID' />
+
+    <node pkg="map_server" name="map_server" type="map_server" args="$(find lab3)/maps/cse022.yaml"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find lab3)/lab3.rviz"/>
+    <node pkg='lab2' name='controller' type='main.py' output='screen'>
+    </node>
+
+</launch>

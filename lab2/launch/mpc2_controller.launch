@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find lab2)/launch/map_obstacles.launch" />
+
+    <param name='/controller/type' value='MPC2' />
+
+    <node pkg='lab2' name='controller' type='main.py' output='screen'>
+    </node>
+</launch>

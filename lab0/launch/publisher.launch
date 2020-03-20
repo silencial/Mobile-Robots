@@ -1,0 +1,15 @@
+<launch>
+    <include file="$(find lab0)/launch/map_server.launch" />
+
+    <arg name="plan_file" default="$(find lab0)/plans/circle" />
+
+    <node pkg="lab0" name="publisher" type="publisher.py" output='screen'>
+        <param name="t_init" value="/lab0/initpose"/>
+        <param name="t_velocity" value="/lab0/velocity" />
+        <param name="t_heading" value="/lab0/heading" />
+
+        <param name="s_reset" value="~reset" />
+
+        <param name="plan_file" value="$(arg plan_file)" />
+    </node>
+</launch>

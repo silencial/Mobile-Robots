@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find lab2)/launch/map_server.launch" />
+
+    <param name='/controller/type' value='PID' />
+
+    <node pkg='lab2' name='controller' type='main.py' output='screen'>
+    </node>
+</launch>

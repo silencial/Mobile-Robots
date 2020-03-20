@@ -1,0 +1,11 @@
+<launch>
+    <include file="$(find lab0)/launch/map_server.launch" />
+
+    <arg name='bag_file' default='$(find lab0)/bags/teleop.bag' />
+    <arg name='reverse' default='true' />
+
+    <node pkg='lab0' name='bag_follower' type='bag_follower.py' output='screen'>
+        <param name='bag_file' value='$(arg bag_file)' />
+        <param name='reverse' value='$(arg reverse)' />
+    </node>
+</launch>
